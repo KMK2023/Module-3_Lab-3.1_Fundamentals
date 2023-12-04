@@ -4,18 +4,38 @@ function getGreeting(name) {
 return 'Hello ' + name + '!';
  */
 
+// Function Declaration syntax
 function getGreeting(name) {
-    return 'Hello ' + name + '!'};
+  return "Hello " + name + "!";
+}
+
+console.log(getGreeting); // This will log the function definition
+
+const greetings = getGreeting("Ram");
+console.log(greeting);
 
 // Function Expression syntax
-const getGreeting = function(name){return 'Hello ' + name + '!'}
-console.log(getGreeting)
-const greeting=getGreeting("Ram")
-console.log(greeting)
+const getGreetingExpression = function (name) {
+  return "Hello " + name + "!";
+};
 
-//Arrow function syntax
-getGreeting2 = (name2)=>{return 'Hello ' + name2 + '!'}
-console.log(getGreeting2)
-const greeting2=getGreeting2("Ram")
-console.log(greeting2)
+console.log(getGreetingExpression); // This will log the function definition
 
+const greetingExpression = getGreetingExpression("Ram");
+console.log(greetingExpression);
+
+// Arrow function syntax
+const getGreetingArrow = (name) => {
+  return "Hello " + name + "!";
+};
+
+console.log(getGreetingArrow); // This will log the function definition
+
+const greetingArrow = getGreetingArrow("Ram");
+console.log(greetingArrow);
+
+// Setting text content of an HTML element
+const welcomeElement = document.querySelector(".welcome");
+
+// You should set the text content using a function call, not the function itself
+welcomeElement.textContent = greeting;

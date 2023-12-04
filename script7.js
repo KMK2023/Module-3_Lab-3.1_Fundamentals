@@ -18,21 +18,57 @@ halfTime() {
 }
 } 
 //modify each of the above object methods to enable function chaining as below:
-basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();-->
+basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
     
 */
 
-score: 0,
-freeThrow() {
+const basketballGame = {
+  score: 0,
+  fouls: 0,
+  freeThrow() {
     this.score++;
-}, basket() { 
+    return this;
+  },
+  basket() {
     this.score += 2;
-},
-threePointer() {
+    return this;
+  },
+  threePointer() {
     this.score += 3;
-},
-halfTime() {
-    console.log('Halftime score is '+this.score);
-}
-} 
+    return this;
+  },
+  foul() {
+    this.fouls++;
+    return this;
+  },
+  halfTime() {
+    console.log(
+      "Halftime score is " + this.score + " (" + this.fouls + " fouls)"
+    );
+    return this;
+  },
+  fullTime() {
+    console.log(
+      "Fulltime score is " + this.score + " (" + this.fouls + " fouls)"
+    );
+    return this;
+  },
+};
 
+const gameScore = document.querySelector(".basket");
+
+gameScore.textContent = "The score is : " + basketballGame.score + " ";
+gameScore.textContent += "The fouls is : " + basketballGame.fouls;
+
+// Establish chaining of scores
+console.log(
+  basketballGame
+    .freeThrow() //Freethrow starts with 0, so mention it twice
+    .freeThrow()
+    .basket()
+    .threePointer()
+    .foul()
+    .foul()
+    .halfTime()
+    .fullTime()
+);

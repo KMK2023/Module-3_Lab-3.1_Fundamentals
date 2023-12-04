@@ -9,26 +9,34 @@ if the person is old enough to drive.
 
 */
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    this.human = true;}
-    
-    const Person1= new Person('Lax', 18);
-    const Person2= new Person('Vaniu', 17);
-    
-    console.log(Person1);
-    console.log(Person2);
-    for (propety in Person.age <=18, console.log('Cannot drive'), else console.log('Can drive');)
+  this.name = name;
+  this.age = age;
+  this.human = true;
+}
+
+const Person1 = new Person("Lax", 18);
+const Person2 = new Person("Vaniu", 17);
+
+console.log(Person1);
+console.log(Person2);
+for (propety in (Person.age <= 18,
+console.log("Cannot drive"),
+console.log("Can drive")));
 
 class PersonClass {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-        this.human = true;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+  }
 }
-      }
 
-      const PersonClass1 = new PersonClass('Shya', 24);
-      const PersonClass2 = new PersonClass('Gaya', 26);
+const PersonClass1 = new PersonClass("Shya", 24);
+const PersonClass2 = new PersonClass("Gaya", 26);
 
+// Below code is to diplay the result in the main HTML page - it needds to be repaired
+var display1 = document.querySelector(".consdecons");
+var display2 = document.querySelector(".consdecons1");
 
+display1.textContent = PersonClass1;
+display2.textContent += PersonClass2;

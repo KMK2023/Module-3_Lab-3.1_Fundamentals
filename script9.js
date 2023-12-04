@@ -38,6 +38,9 @@ cat1.name='Sharpy';
 console.log(cat1);
 
 
+// Below code is to diplay the result in the main HTML page - it needds to be repaired
+var animal=document.getElementsByClassName(".refe");
+animal.textContent=cat1.name + " " + dog1 + " " + teamSports + " " + moreSports + " " + original;
 
 
 
